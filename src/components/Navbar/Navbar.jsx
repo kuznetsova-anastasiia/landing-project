@@ -6,7 +6,7 @@ import { Button } from '../Button';
 export const Navbar = () => {
   return (
     <div className="navbar">
-      <a href="/" className="navbar__logo">
+      <a href="#home" className="navbar__logo">
         <img 
           className="navbar__logo-img"
           src={logo} 

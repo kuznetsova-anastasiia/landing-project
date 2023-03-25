@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 export const Button = ({ text, isPrimary = false }) => {
   return (
-    <a href="/" className={classNames(
+    <a href="#home" className={classNames(
       'button',
       { 'button--primary': isPrimary },
     )}>
