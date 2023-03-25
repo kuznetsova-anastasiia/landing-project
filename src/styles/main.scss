@@ -1,0 +1,32 @@
+@import './utils/variables.scss';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500&display=swap');
+
+
+@import './reset.scss';
+
+:root {
+  font-family: 'Catamaran', sans-serif;
+  font-size: $initial-text-size;
+  line-height: 150%;
+  color: $light-text;
+
+  background-color: $dark-bg;
+
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 10px;
+  border: 2px solid gray;
+}

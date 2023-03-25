@@ -1,0 +1,28 @@
+@import '../utils/variables.scss';
+
+.feature {
+  max-width: 220px;
+  margin-bottom: 10px;
+
+  transition: transform $initial-transition;
+
+  &:hover {
+    transform: translateX(10%);
+  }
+
+  &__icon {
+    float: left;
+    margin-right: 10px;
+  }
+
+  &__title {
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

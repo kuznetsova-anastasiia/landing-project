@@ -1,0 +1,32 @@
+@import '../utils/variables.scss';
+
+.testimonial-item {
+  max-width: 430px;
+  padding: 40px  80px 40px 40px;
+
+  background-color: $dark-bg;
+  border: 1px solid #fff;
+  border-radius: 10px;
+
+  transition: transform $initial-transition;
+
+  &:hover {
+    transform: translateY(-15%);
+  }
+
+  &__img {
+    float: left;
+    margin-right: 14px;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    margin-bottom: 30px;
+  }
+
+  &__desc {
+    font-size: 16px;
+  }
+}

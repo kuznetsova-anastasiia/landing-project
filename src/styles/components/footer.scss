@@ -1,0 +1,59 @@
+@import '../utils/variables.scss';
+@import '../utils/keyframes.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+
+  padding: 100px 0;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 60px;
+    
+    max-height: 150px;
+  }
+
+  &__link {
+    padding: 5px;
+
+    transition: color $initial-transition;
+
+    &:hover {
+      color: $main-accent;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+    &__contacts-link {
+      display: flex;
+      align-items: center;
+
+      transition: color $initial-transition;
+
+      &:hover {
+        color: $main-accent;
+      }
+    }
+
+    &__contacts-icon {
+      margin-right: 10px;
+
+      &:hover {
+        animation: drag 500ms;
+      }
+    }
+
+    &__social {
+      display: flex;
+      gap: 24px;
+    }
+}

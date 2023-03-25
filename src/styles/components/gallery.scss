@@ -1,0 +1,42 @@
+@import '../utils/variables.scss';
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  margin-bottom: 160px;
+
+  &__title {
+    font-size: 46px;
+    line-height: 57px;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    display: block;
+
+    border-radius: 12px;
+
+    transition: transform $initial-transition;
+
+    &:hover {
+      transform: translateY(-10%);
+    }
+  }
+}

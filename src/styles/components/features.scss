@@ -1,0 +1,43 @@
+@import '../utils/variables.scss';
+
+.features {
+  margin-bottom: 160px;
+
+  &__title {
+    text-align: center;
+    font-size: 52px;
+    line-height: 62px;
+
+    margin-bottom: 28px;
+  }
+
+  &__info {
+    max-width: 510px;
+
+    text-align: center;
+    margin: 0 auto;
+
+    margin-bottom: 80px;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+  }
+
+  &__img {
+    transition: transform $initial-transition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}

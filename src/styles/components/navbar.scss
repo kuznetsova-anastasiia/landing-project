@@ -1,0 +1,57 @@
+@import '../utils/variables.scss';
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 20px 30px;
+  margin-bottom: 85px;
+
+  &__logo-img {
+    transition: transform $initial-transition;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__list-item {
+    font-size: 16px;
+
+    transition: transform $initial-transition;
+
+    &::after {
+      content: '';
+      display: block;
+      bottom: 0;
+      height: 1px;
+      background-color: transparent;
+      border-radius: 20px;
+      transition: background-color $initial-transition;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+
+      &::after {
+        background-color: $main-accent;
+      }
+    }
+  }
+
+  &__list-link {
+    padding: 10px;
+
+    transition: color $initial-transition;
+
+    &:hover {
+      color: $main-accent;
+    }
+  }
+}
