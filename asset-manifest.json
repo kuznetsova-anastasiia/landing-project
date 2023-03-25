@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/landing-project/static/css/main.06e41299.css",
+    "main.js": "/landing-project/static/js/main.835e9e5b.js",
+    "static/js/787.ebbeeddc.chunk.js": "/landing-project/static/js/787.ebbeeddc.chunk.js",
+    "static/media/screens.png": "/landing-project/static/media/screens.0acf0d33fac7fed02354.png",
+    "static/media/features.png": "/landing-project/static/media/features.1e4a4064acd10dc06d73.png",
+    "static/media/Rectangle2.png": "/landing-project/static/media/Rectangle2.066c80279db08571847c.png",
+    "static/media/Rectangle3.png": "/landing-project/static/media/Rectangle3.a30fd374ea4389b56a83.png",
+    "static/media/Rectangle4.png": "/landing-project/static/media/Rectangle4.5e98f5ac5aa5ec317546.png",
+    "static/media/preloader.gif": "/landing-project/static/media/preloader.7281bd38662486b15fee.gif",
+    "static/media/notifications.png": "/landing-project/static/media/notifications.9104f444257e5ea1d1b5.png",
+    "static/media/Rectangle1.png": "/landing-project/static/media/Rectangle1.ce153e6a553dea881433.png",
+    "static/media/macbook.png": "/landing-project/static/media/macbook.8782e14631861b4c806b.png",
+    "static/media/android.svg": "/landing-project/static/media/android.6aa6169490c2534b10dd8ac1192566ec.svg",
+    "static/media/airbnb.svg": "/landing-project/static/media/airbnb.576898553396c2c4cbe6ce34750a553b.svg",
+    "static/media/ibm.svg": "/landing-project/static/media/ibm.1b078de57c867380cb622efb23014f37.svg",
+    "static/media/app-store.svg": "/landing-project/static/media/app-store.7e0a2eec0ea0df2b4634cb4edfaf96ec.svg",
+    "static/media/apiary.svg": "/landing-project/static/media/apiary.c0467752d8042eb141d81f6138dd2895.svg",
+    "static/media/basecamp.svg": "/landing-project/static/media/basecamp.b37acb55e3e6f78922d0c0a0d51d148d.svg",
+    "static/media/twitter.svg": "/landing-project/static/media/twitter.99f284675633a97867d1ebfebe58396b.svg",
+    "static/media/spoon.svg": "/landing-project/static/media/spoon.aa11bd460f52b668ebc7d6a9c18b064b.svg",
+    "static/media/linkedin.svg": "/landing-project/static/media/linkedin.fc46ee67020f7827850c98e00bb789bb.svg",
+    "static/media/infinity.svg": "/landing-project/static/media/infinity.8dccd742881a5605729e8d92be98ec88.svg",
+    "static/media/alien.svg": "/landing-project/static/media/alien.817ec3e1af55ce39ef7dee20db3faffc.svg",
+    "index.html": "/landing-project/index.html",
+    "static/media/facebook.svg": "/landing-project/static/media/facebook.3039b93f80be75571ffe903e0f74fb1e.svg",
+    "static/media/location.svg": "/landing-project/static/media/location.7efdfe3d681d4c2f5ed7f1e7bc19687a.svg",
+    "static/media/phone.svg": "/landing-project/static/media/phone.64ac9de75780268a70813c7ad3b0deda.svg",
+    "main.06e41299.css.map": "/landing-project/static/css/main.06e41299.css.map",
+    "main.835e9e5b.js.map": "/landing-project/static/js/main.835e9e5b.js.map",
+    "787.ebbeeddc.chunk.js.map": "/landing-project/static/js/787.ebbeeddc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06e41299.css",
+    "static/js/main.835e9e5b.js"
+  ]
+}
