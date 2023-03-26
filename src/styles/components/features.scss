@@ -1,22 +1,18 @@
 @import '../utils/variables.scss';
 @import '../utils/mixins.scss';
+@import '../utils/placeholders.scss';
 
 .features {
-  margin-bottom: 160px;
+  @extend %section;
 
   &__title {
-    text-align: center;
-    font-size: 52px;
-    line-height: 62px;
+    @extend %second-title;
 
     margin-bottom: 28px;
   }
 
   &__info {
     max-width: 510px;
-
-    text-align: center;
-    margin: 0 auto;
 
     margin-bottom: 80px;
   }

@@ -1,15 +1,11 @@
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import '../utils/placeholders.scss';
 
-  margin-bottom: 180px;
+.testimonials {
+  @extend %section;
 
 
   &__title {
-    text-align: center;
-    font-size: 46px;
-    line-height: 57px;
+    @extend %second-title;
 
     margin-bottom: 60px;
   }
