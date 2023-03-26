@@ -1,7 +1,7 @@
 import '../../styles/components/header.scss';
 import { Button } from "../Button";
 
-export const Header = () => {
+export const Header = ({ setFormActive }) => {
   return (
     <div className="header">
       <h1 className="header__title">
@@ -13,7 +13,7 @@ export const Header = () => {
       </p>
 
       <div className="header__buttons-wrap">
-        <Button text="Try For Free" isPrimary={true} />
+        <Button text="Try For Free" isPrimary={true} setFormActive={setFormActive} />
         <a href='#features' className='button'>
           Learn More
         </a>

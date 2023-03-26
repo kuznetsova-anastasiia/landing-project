@@ -4,7 +4,7 @@ import '../../styles/components/navbar.scss';
 import { navItems } from '../../utils/navItems';
 import { Button } from '../Button';
 
-export const Navbar = ({ setMenuActive }) => {
+export const Navbar = ({ setMenuActive, setFormActive }) => {
   return (
     <div className="navbar">
       <a href="#home" className="navbar__logo">
@@ -25,7 +25,7 @@ export const Navbar = ({ setMenuActive }) => {
         ))}
       </ul>
 
-      <Button text="Try now" />
+      <Button text="Try now" setFormActive={setFormActive} />
 
       <div className="navbar__menu" onClick={() => setMenuActive(true)}>
         <img 

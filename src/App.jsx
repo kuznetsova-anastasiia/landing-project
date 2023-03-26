@@ -10,10 +10,16 @@ import { Footer } from './components/Footer';
 import { Loader } from './components/Loader';
 import { BurgerMenu } from './components/BurgerMenu';
 import { useEffect, useState } from 'react';
+import { TryForm } from './components/TryForm';
+import { Message } from './components/Message';
+import { GalleryModal } from './components/GalleryModal';
 
 export const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
+  const [formActive, setFormActive] = useState(false);
+  const [message, setMessage] = useState(false);
+  const [galleryActive, setGalleryActive] = useState(false);
 
   useEffect(() => {
     window.onload = () => {
@@ -27,16 +33,16 @@ export const App = () => {
     <>
       <Loader isLoaded={isLoaded} />
       <div className="App" id="home">
-        <Navbar setMenuActive={setMenuActive} />
+        <Navbar setMenuActive={setMenuActive} setFormActive={setFormActive} />
 
-        <Header />
+        <Header setFormActive={setFormActive} />
 
 
         <main>
           <div className="container">
             <Features />
-            <Contents />
-            <Gallery />
+            <Contents setFormActive={setFormActive} />
+            <Gallery setGalleryActive={setGalleryActive} />
             <Partners />
             <Testimonials />
           </div>
@@ -45,6 +51,9 @@ export const App = () => {
         <Footer />
 
         <BurgerMenu active={menuActive} setActive={setMenuActive} />
+        <TryForm active={formActive} setActive={setFormActive} setMessage={setMessage} />
+        <Message active={message} />
+        <GalleryModal active={galleryActive} setActive={setGalleryActive} />
       </div>
     </>
     

@@ -1,0 +1,41 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.modal {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transform: scale(0);
+  transition: transform 500ms;
+
+  &--active {
+    transform: scale(1);
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__content {
+    position: relative;
+    padding: 60px 40px 20px;
+    background-color: $dark-bg;
+    border-radius: 10px;
+
+    @include onMobile {
+      padding: 60px 10px 20px;
+    }
+  }
+}

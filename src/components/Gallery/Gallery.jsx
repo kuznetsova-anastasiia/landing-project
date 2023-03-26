@@ -5,11 +5,7 @@ import rectangle2 from '../../img/gallery/Rectangle2.png';
 import rectangle3 from '../../img/gallery/Rectangle3.png';
 import rectangle4 from '../../img/gallery/Rectangle4.png';
 
-import { Button } from "../Button";
-
-
-
-export const Gallery = () => {
+export const Gallery = ({ setGalleryActive }) => {
   return (
     <div className="gallery" id="gallery">
       <h2 className="gallery__title">
@@ -45,7 +41,16 @@ export const Gallery = () => {
         />
       </div>
 
-      <Button text="See more" />
+      <a 
+        href='/' 
+        className='button'
+        onClick={(e) => {
+          e.preventDefault();
+          setGalleryActive(true);
+        }}
+      >
+        See more
+      </a>
     </div>
   );
 }

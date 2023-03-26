@@ -3,7 +3,7 @@ import { Button } from "../Button";
 
 const defaultDesc = 'Ever wondered if you\'re too reliant on a client for work? Slate helps you identify.'
 
-export const ContentElement = ({ title, desc = defaultDesc, img }) => {
+export const ContentElement = ({ title, desc = defaultDesc, img, setFormActive }) => {
   return (
     <div className="content-item">
       <h3 className="content-item__title">
@@ -14,7 +14,7 @@ export const ContentElement = ({ title, desc = defaultDesc, img }) => {
         {desc}
       </p>
 
-      <Button text="Try For Free" isPrimary={true} />
+      <Button text="Try For Free" isPrimary={true} setFormActive={setFormActive} />
 
       <img 
         className="content-item__img"

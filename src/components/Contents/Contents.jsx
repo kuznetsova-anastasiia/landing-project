@@ -3,7 +3,7 @@ import macbook from '../../img/macbook.png'
 import notifications from '../../img/notifications.png';
 import { ContentElement } from "../ContentElement";
 
-export const Contents = () => {
+export const Contents = ({ setFormActive }) => {
   return (
     <div className="contents" id="contents">
       <h2 className="contents__title">
@@ -16,8 +16,8 @@ export const Contents = () => {
       </p>
 
       <div className="contents__list">
-        <ContentElement title="Work" img={macbook} />
-        <ContentElement title="Design with real data" img={notifications} />
+        <ContentElement title="Work" img={macbook} setFormActive={setFormActive} />
+        <ContentElement title="Design with real data" img={notifications} setFormActive={setFormActive} />
       </div>
     </div>
   );
