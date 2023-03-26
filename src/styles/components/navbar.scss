@@ -1,4 +1,5 @@
 @import '../utils/variables.scss';
+@import '../utils/mixins.scss';
 
 .navbar {
   display: flex;
@@ -6,7 +7,10 @@
   justify-content: space-around;
 
   padding: 20px 30px;
-  margin-bottom: 85px;
+
+  @include onMobile {
+    padding: 10px 5px;
+  }
 
   &__logo-img {
     transition: transform $initial-transition;
@@ -14,11 +18,19 @@
     &:hover {
       transform: scale(1.05);
     }
+
+    @include onMobile {
+      width: 50vw;
+    }
   }
 
   &__list {
     display: flex;
     gap: 10px;
+
+    @include onTablet {
+      display: none;
+    }
   }
 
   &__list-item {
@@ -53,5 +65,15 @@
     &:hover {
       color: $main-accent;
     }
+  }
+
+  &__menu {
+    display: none;
+    cursor: pointer;
+
+    @include onTablet {
+      display: block;
+    }
+
   }
 }

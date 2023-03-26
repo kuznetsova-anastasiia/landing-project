@@ -1,0 +1,89 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.burger-menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  right: 0;
+  transform: translateX(100%);
+
+  transition: transform $initial-transition;
+
+  &__blur {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    opacity: 0;
+
+    transition: opacity 500ms;
+  }
+
+  &__content {
+    position: absolute;
+    right: 0;
+    width: 40vw;
+    height: 100vh;
+    background-color: $dark-bg;
+    background-image: url('../../img/gradient.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+    padding: 30px 50px;
+
+    @include onMobile {
+      padding: 30px;
+      width: 60vw;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10vh;
+  }
+
+
+  &__title {
+    font-size: 36px;
+  }
+
+  &__close-btn {
+    display: block;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 4vh;
+  }
+
+  &__item {
+    font-size: 28px;
+  }
+
+  &__link {
+    transition: color $initial-transition,
+    border-color $initial-transition;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: $main-accent;
+      border-color: $main-accent;
+    }
+  }
+
+  &--active {
+    transform: translateX(0);
+  }
+
+  &--active > &__blur {
+    opacity: 1;
+    transition: opacity 2000ms;
+  }
+}

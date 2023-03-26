@@ -8,10 +8,12 @@ import { Partners } from './components/Partners';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
 import { Loader } from './components/Loader';
+import { BurgerMenu } from './components/BurgerMenu';
 import { useEffect, useState } from 'react';
 
 export const App = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
 
   useEffect(() => {
     window.onload = () => {
@@ -25,22 +27,25 @@ export const App = () => {
     <>
       <Loader isLoaded={isLoaded} />
       <div className="App" id="home">
-        <Navbar />
+        <Navbar setMenuActive={setMenuActive} />
 
-      <div className="container">
         <Header />
 
+
         <main>
-          <Features />
-          <Contents />
-          <Gallery />
-          <Partners />
-          <Testimonials />
+          <div className="container">
+            <Features />
+            <Contents />
+            <Gallery />
+            <Partners />
+            <Testimonials />
+          </div>
         </main>
 
         <Footer />
+
+        <BurgerMenu active={menuActive} setActive={setMenuActive} />
       </div>
-    </div>
     </>
     
   );

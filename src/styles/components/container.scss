@@ -1,3 +1,7 @@
 .container {
-  padding: 0 50px;
+  padding: 0 70px;
+
+  @include onMobile {
+    padding: 0 30px;
+  }
 }
