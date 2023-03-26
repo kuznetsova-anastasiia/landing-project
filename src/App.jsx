@@ -22,11 +22,9 @@ export const App = () => {
   const [galleryActive, setGalleryActive] = useState(false);
 
   useEffect(() => {
-    window.onload = () => {
-      setTimeout(() => {
-        setIsLoaded(true);
-      }, 100);
-    }
+    setTimeout(() => {
+      setIsLoaded(true);
+    }, 300);
   }, []);
 
   return (
