@@ -25,7 +25,7 @@ export const Navbar = ({ setMenuActive, setFormActive }) => {
         ))}
       </ul>
 
-      <Button text="Try now" setFormActive={setFormActive} />
+      <Button className="navbar__button" text="Try now" setFormActive={setFormActive} />
 
       <div className="navbar__menu" onClick={() => setMenuActive(true)}>
         <img 

@@ -13,6 +13,7 @@
   }
 
   &__logo-img {
+    max-width: 206px;
     transition: transform $initial-transition;
 
     &:hover {
@@ -20,7 +21,7 @@
     }
 
     @include onMobile {
-      width: 50vw;
+      width: 40vw;
     }
   }
 
@@ -74,6 +75,11 @@
     @include onTablet {
       display: block;
     }
+  }
 
+  &__menu-icon {
+    @include onMobile {
+      width: 48px;
+    }
   }
 }
