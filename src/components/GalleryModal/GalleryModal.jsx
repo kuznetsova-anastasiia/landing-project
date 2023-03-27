@@ -14,6 +14,7 @@ import rectangle7 from '../../img/gallery/Rectangle7.png';
 import prev from '../../img/icons/prev.svg';
 import next from '../../img/icons/next.svg';
 import { useState } from 'react';
+import { Modal, ModalCloseButton, ModalContent, ModalOverlay } from '@chakra-ui/react';
 
 const photos = [{src: rectangle1, id: 1}, {src: rectangle2, id: 2}, {src: rectangle3, id: 3}, {src: rectangle4, id: 4}, {src: rectangle5, id: 5}, {src: rectangle6, id: 6}, {src: rectangle7, id: 7}];
 
@@ -46,53 +47,49 @@ export const GalleryModal = ({ active, setActive }) => {
   const itemTransform = currentImg * (imgWidth + gap);
 
   return (
-    <div 
-      className={classNames(
-        'modal',
-        { 'modal--active': active },
-      )}
-      onClick={() => setActive(false)}
-    >
-      <div className='modal__content' onClick={(e) => e.stopPropagation()}>
-        <img
-          className="modal__close-icon"
-          src={close} 
-          alt="close" 
-          onClick={() => setActive(false)} 
-        />
-        
-        <div className='gallery-carousel'>
-          <button 
-            type="button" 
-            className='gallery-carousel__button' 
-            onClick={handlePrevClick}
-          >
-            <img className='gallery-carousel__icon' src={prev} alt="Prev" />
-          </button>
+    <Modal isOpen={active} onClose={setActive} size="3xl">
+      <ModalOverlay />
+      <ModalContent bg="#181818">
+        <div className='modal__content'>
+          <img 
+            className='modal__close-icon' 
+            src={close} 
+            alt="close"
+            onClick={() => setActive(false)}
+          />
+          <div className='gallery-carousel'>
+            <button 
+              type="button" 
+              className='gallery-carousel__button' 
+              onClick={handlePrevClick}
+            >
+              <img className='gallery-carousel__icon' src={prev} alt="Prev" />
+            </button>
 
-          <div className='gallery-carousel__container'>
-            {photos.map(photo => (
-              <img 
-                className='gallery-carousel__image' 
-                key={photo.id} 
-                src={photo.src} 
-                alt={photo.id}
-                style={{
-                  transform: `translate(-${itemTransform}px)`,
-                }}
-              />
-            ))}
+            <div className='gallery-carousel__container'>
+              {photos.map(photo => (
+                <img 
+                  className='gallery-carousel__image' 
+                  key={photo.id} 
+                  src={photo.src} 
+                  alt={photo.id}
+                  style={{
+                    transform: `translate(-${itemTransform}px)`,
+                  }}
+                />
+              ))}
+            </div>
+
+            <button 
+              type="button" 
+              className='gallery-carousel__button'
+              onClick={handleNextClick}
+            >
+              <img className='gallery-carousel__icon' src={next} alt="Next" />
+            </button>
           </div>
-
-          <button 
-            type="button" 
-            className='gallery-carousel__button'
-            onClick={handleNextClick}
-          >
-            <img className='gallery-carousel__icon' src={next} alt="Next" />
-          </button>
         </div>
-      </div>
-    </div>
+      </ModalContent>
+    </Modal>
   );
 }

@@ -6,13 +6,6 @@
 @import './components/container.scss';
 
 :root {
-  font-family: 'Catamaran', sans-serif;
-  font-size: $initial-text-size;
-  line-height: 150%;
-  color: $light-text;
-
-  background-color: $dark-bg;
-
   scroll-behavior: smooth;
 }
 
@@ -28,4 +21,12 @@
   background-color: #fff;
   border-radius: 10px;
   border: 2px solid gray;
+}
+
+.App {
+  background-color: $dark-bg;
+  color: $light-text;
+  font-family: 'Catamaran', sans-serif;
+  font-size: $initial-text-size;
+  line-height: 150%;
 }

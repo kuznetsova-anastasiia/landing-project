@@ -29,7 +29,7 @@
   }
 
   &__img {
-    width: 60vw;
+    width: 50vw;
 
     transition: transform $initial-transition;
 
@@ -38,6 +38,7 @@
     }
 
     @include onMobile {
+      width: 70vw;
       margin-bottom: 20px;
     }
   }

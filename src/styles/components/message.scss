@@ -2,22 +2,13 @@
 
 .message {
   position: fixed;
-  top: 2%;
+  bottom: 2%;
   right: 2%;
-
-  background-color: rgba(75, 176, 78, 0.5);
-  padding: 20px 40px;
-  border-radius: 10px;
 
   transform: translateX(130%);
   transition: transform $initial-transition;
 
   &--active {
     transform: translateX(0);
-  }
-
-  &__text {
-    text-align: center;
-    color: #000;
   }
 }
