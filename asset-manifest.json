@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/landing-project/static/css/main.25cc5b2e.css",
-    "main.js": "/landing-project/static/js/main.b90c9acd.js",
+    "main.css": "/landing-project/static/css/main.0e6e93aa.css",
+    "main.js": "/landing-project/static/js/main.0776b53c.js",
     "static/js/787.ebbeeddc.chunk.js": "/landing-project/static/js/787.ebbeeddc.chunk.js",
     "static/media/screens.png": "/landing-project/static/media/screens.0acf0d33fac7fed02354.png",
     "static/media/features.png": "/landing-project/static/media/features.e6d99fa6ad8a1d84eee2.png",
@@ -34,12 +34,12 @@
     "static/media/menu.svg": "/landing-project/static/media/menu.932691ae376c905844910a2105c54969.svg",
     "static/media/prev.svg": "/landing-project/static/media/prev.6aade94972a74907cad5a9c80cec29e6.svg",
     "static/media/next.svg": "/landing-project/static/media/next.e7aea246eefc628a4ab09850cb7a46e5.svg",
-    "main.25cc5b2e.css.map": "/landing-project/static/css/main.25cc5b2e.css.map",
-    "main.b90c9acd.js.map": "/landing-project/static/js/main.b90c9acd.js.map",
+    "main.0e6e93aa.css.map": "/landing-project/static/css/main.0e6e93aa.css.map",
+    "main.0776b53c.js.map": "/landing-project/static/js/main.0776b53c.js.map",
     "787.ebbeeddc.chunk.js.map": "/landing-project/static/js/787.ebbeeddc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25cc5b2e.css",
-    "static/js/main.b90c9acd.js"
+    "static/css/main.0e6e93aa.css",
+    "static/js/main.0776b53c.js"
   ]
 }
