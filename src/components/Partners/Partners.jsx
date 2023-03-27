@@ -1,9 +1,18 @@
 import '../../styles/components/partners.scss';
 import { partnerImages } from '../../utils/partnerImages';
 
+import { motion } from 'framer-motion';
+import { sectionAnimation } from '../../utils/animations';
+
 export const Partners = () => {
   return (
-    <div className="partners" id="partners">
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionAnimation}
+      className="partners" 
+      id="partners"
+    >
       <h2 className="partners__title">
         Partners
       </h2>
@@ -26,6 +35,6 @@ export const Partners = () => {
         ))}
       </ul>
 
-    </div>
+    </motion.div>
   );
 }

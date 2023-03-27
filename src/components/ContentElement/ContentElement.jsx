@@ -1,11 +1,17 @@
 import '../../styles/components/contentItem.scss';
 import { Button } from "../Button";
+import { motion } from 'framer-motion';
 
 const defaultDesc = 'Ever wondered if you\'re too reliant on a client for work? Slate helps you identify.'
 
-export const ContentElement = ({ title, desc = defaultDesc, img, setFormActive }) => {
+export const ContentElement = ({ title, desc = defaultDesc, img, setFormActive, animation }) => {
   return (
-    <div className="content-item">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={animation}
+      className="content-item"
+    >
       <h3 className="content-item__title">
         {title}
       </h3>
@@ -21,6 +27,6 @@ export const ContentElement = ({ title, desc = defaultDesc, img, setFormActive }
         src={img} 
         alt="Content Feature" 
       />
-    </div>
+    </motion.div>
   );
-}
+};

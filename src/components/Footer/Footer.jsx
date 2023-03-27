@@ -1,5 +1,7 @@
 import '../../styles/components/footer.scss';
 
+import { motion } from 'framer-motion';
+
 import location from '../../img/icons/location.svg';
 import phone from '../../img/icons/phone.svg';
 import twitter from '../../img/icons/twitter.svg';
@@ -8,9 +10,24 @@ import linkedin from '../../img/icons/linkedin.svg';
 
 import { navItems } from "../../utils/navItems";
 
+const footerAnimation = {
+  hidden: {
+    transform: 'scale(0)',
+  },
+  visible: {
+    transform: 'scale(1)',
+    transition: {duration: 0.5}
+  }
+}
+
 export const Footer = () => {
   return (
-    <div className="footer">
+    <motion.footer
+      initial="hidden"
+      whileInView="visible"
+      variants={footerAnimation}
+      className="footer"
+    >
       <ul className="footer__list">
         {navItems.map(item => (
           <li className="footer__item" key={item}>
@@ -62,6 +79,6 @@ export const Footer = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.footer>
   );
 }

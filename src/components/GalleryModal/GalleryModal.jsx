@@ -1,7 +1,6 @@
 import '../../styles/components/modal.scss';
 import '../../styles/components/galleryModal.scss';
 
-import classNames from 'classnames';
 import close from '../../img/icons/cancel.svg';
 import rectangle1 from '../../img/gallery/Rectangle1.png';
 import rectangle2 from '../../img/gallery/Rectangle2.png';
@@ -14,7 +13,7 @@ import rectangle7 from '../../img/gallery/Rectangle7.png';
 import prev from '../../img/icons/prev.svg';
 import next from '../../img/icons/next.svg';
 import { useState } from 'react';
-import { Modal, ModalCloseButton, ModalContent, ModalOverlay } from '@chakra-ui/react';
+import { Modal, ModalContent, ModalOverlay } from '@chakra-ui/react';
 
 const photos = [{src: rectangle1, id: 1}, {src: rectangle2, id: 2}, {src: rectangle3, id: 3}, {src: rectangle4, id: 4}, {src: rectangle5, id: 5}, {src: rectangle6, id: 6}, {src: rectangle7, id: 7}];
 

@@ -24,6 +24,7 @@
 }
 
 .App {
+  overflow: hidden;
   background-color: $dark-bg;
   color: $light-text;
   font-family: 'Catamaran', sans-serif;

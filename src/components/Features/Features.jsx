@@ -4,11 +4,53 @@ import spoon from '../../img/icons/spoon.svg';
 import alien from '../../img/icons/alien.svg';
 import infinity from '../../img/icons/infinity.svg';
 
+import { motion } from 'framer-motion';
+
 import { FeatureElement } from '../FeatureElement';
+
+const featuresAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {duration: 0.7, delay: 0.2}
+  }
+}
+
+const down = {
+  hidden: {
+    y: 100,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {duration: 0.5, delay: 0.3}
+  }
+};
+
+const up = {
+  hidden: {
+    y: -100,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {duration: 0.5, delay: 0.3}
+  }
+}
 
 export const Features = () => {
   return (
-    <div className="features" id="features">
+    <motion.div 
+      initial="hidden"
+      whileInView="visible"
+      variants={featuresAnimation}
+      className="features" 
+      id="features"
+    >
       <h2 className="features__title">
         Features
       </h2>
@@ -18,13 +60,14 @@ export const Features = () => {
       </p>
 
       <div className="features__main">
-        <img 
+        <motion.img
+          variants={down}
           className="features__img"
           src={features} 
           alt="Feature with bot messaging" 
         />
 
-        <div className="features__list">
+        <motion.div variants={up} className="features__list">
           <FeatureElement 
             img={spoon} 
             title="A single source of truth" 
@@ -39,8 +82,8 @@ export const Features = () => {
             img={infinity}
             title="Or with rules"
           />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

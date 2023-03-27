@@ -6,10 +6,18 @@ import ralph from '../../img/ralph.png';
 import jorge from '../../img/jorge.png';
 
 import {TestimonialItem } from '../TestimonialItem';
+import { motion } from 'framer-motion';
+import { sectionAnimation } from '../../utils/animations';
 
 export const Testimonials = () => {
   return (
-    <div className="testimonials" id="testimonials">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={sectionAnimation}
+      className="testimonials" 
+      id="testimonials"
+    >
       <h2 className="testimonials__title">
         Testimonials
       </h2>
@@ -32,6 +40,6 @@ export const Testimonials = () => {
           name="Jorge Murphy"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

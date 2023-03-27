@@ -1,9 +1,25 @@
 import '../../styles/components/header.scss';
 import { Button } from "../Button";
+import { motion } from 'framer-motion';
+
+const headerAnimation = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {duration: 1, delay: 0.2}
+  }
+}
 
 export const Header = ({ setFormActive }) => {
   return (
-    <div className="header">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      variants={headerAnimation}
+      className="header"
+    >
       <h1 className="header__title">
         Work at the speed of thought
       </h1>
@@ -18,6 +34,6 @@ export const Header = ({ setFormActive }) => {
           Learn More
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
