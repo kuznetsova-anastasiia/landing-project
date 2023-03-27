@@ -10,23 +10,24 @@ export const ContentElement = ({ title, desc = defaultDesc, img, setFormActive, 
       initial="hidden"
       whileInView="visible"
       variants={animation}
-      className="content-item"
     >
-      <h3 className="content-item__title">
-        {title}
-      </h3>
+      <div className="content-item">
+        <h3 className="content-item__title">
+          {title}
+        </h3>
 
-      <p className="content-item__desc">
-        {desc}
-      </p>
+        <p className="content-item__desc">
+          {desc}
+        </p>
 
-      <Button text="Try For Free" isPrimary={true} setFormActive={setFormActive} />
+        <Button text="Try For Free" isPrimary={true} setFormActive={setFormActive} />
 
-      <img 
-        className="content-item__img"
-        src={img} 
-        alt="Content Feature" 
-      />
+        <img 
+          className="content-item__img"
+          src={img} 
+          alt="Content Feature" 
+        />
+      </div>
     </motion.div>
   );
 };

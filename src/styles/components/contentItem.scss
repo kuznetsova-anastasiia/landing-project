@@ -7,11 +7,13 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  min-height: 610px;
 
   padding: 40px 35px;
 
   background-color: #fff;
   border-radius: 10px;
+  cursor: pointer;
 
   transition: transform $initial-transition;
 
