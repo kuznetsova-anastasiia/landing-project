@@ -7,7 +7,6 @@ import { Gallery } from './components/Gallery';
 import { Partners } from './components/Partners';
 import { Testimonials } from './components/Testimonials';
 import { Footer } from './components/Footer';
-import { Loader } from './components/Loader';
 import { BurgerMenu } from './components/BurgerMenu';
 import { useEffect, useState } from 'react';
 import { TryForm } from './components/TryForm';
@@ -15,7 +14,6 @@ import { Message } from './components/Message';
 import { GalleryModal } from './components/GalleryModal';
 
 export const App = () => {
-  const [isLoaded, setIsLoaded] = useState(true);
   const [menuActive, setMenuActive] = useState(false);
   const [formActive, setFormActive] = useState(false);
   const [message, setMessage] = useState(false);
@@ -59,32 +57,28 @@ export const App = () => {
 
 
   return (
-    <>
-      <Loader isLoaded={isLoaded} />
-      <div className="App" id="home">
-        <Navbar setMenuActive={setMenuActive} setFormActive={setFormActive} />
+    <div className="App" id="home">
+      <Navbar setMenuActive={setMenuActive} setFormActive={setFormActive} />
 
-        <Header setFormActive={setFormActive} />
+      <Header setFormActive={setFormActive} />
 
 
-        <main>
-          <div className="container">
-            <Features />
-            <Contents setFormActive={setFormActive} />
-            <Gallery setGalleryActive={setGalleryActive} />
-            <Partners />
-            <Testimonials />
-          </div>
-        </main>
+      <main>
+        <div className="container">
+          <Features />
+          <Contents setFormActive={setFormActive} />
+          <Gallery setGalleryActive={setGalleryActive} />
+          <Partners />
+          <Testimonials />
+        </div>
+      </main>
 
-        <Footer />
+      <Footer />
 
-        <BurgerMenu active={menuActive} setActive={setMenuActive} />
-        <TryForm active={formActive} setActive={setFormActive} setMessage={setMessage} />
-        <Message active={message} />
-        <GalleryModal active={galleryActive} setActive={setGalleryActive} />
-      </div>
-    </>
-    
+      <BurgerMenu active={menuActive} setActive={setMenuActive} />
+      <TryForm active={formActive} setActive={setFormActive} setMessage={setMessage} />
+      <Message active={message} />
+      <GalleryModal active={galleryActive} setActive={setGalleryActive} />
+    </div>
   );
 }
