@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/landing-project/static/css/main.8c51c227.css",
-    "main.js": "/landing-project/static/js/main.46d9c227.js",
+    "main.css": "/landing-project/static/css/main.ddb234b9.css",
+    "main.js": "/landing-project/static/js/main.df3728fc.js",
     "static/js/787.ebbeeddc.chunk.js": "/landing-project/static/js/787.ebbeeddc.chunk.js",
     "static/media/screens.png": "/landing-project/static/media/screens.0acf0d33fac7fed02354.png",
     "static/media/features.png": "/landing-project/static/media/features.e6d99fa6ad8a1d84eee2.png",
@@ -11,7 +11,6 @@
     "static/media/Rectangle5.png": "/landing-project/static/media/Rectangle5.ffc637814888aa852495.png",
     "static/media/Rectangle7.png": "/landing-project/static/media/Rectangle7.be36c90510afbc7d9067.png",
     "static/media/Rectangle6.png": "/landing-project/static/media/Rectangle6.f7fb41d99995c7e2d7fb.png",
-    "static/media/preloader.gif": "/landing-project/static/media/preloader.7281bd38662486b15fee.gif",
     "static/media/notifications.png": "/landing-project/static/media/notifications.9104f444257e5ea1d1b5.png",
     "static/media/Rectangle1.png": "/landing-project/static/media/Rectangle1.ce153e6a553dea881433.png",
     "static/media/macbook.png": "/landing-project/static/media/macbook.8782e14631861b4c806b.png",
@@ -34,12 +33,12 @@
     "static/media/menu.svg": "/landing-project/static/media/menu.932691ae376c905844910a2105c54969.svg",
     "static/media/prev.svg": "/landing-project/static/media/prev.6aade94972a74907cad5a9c80cec29e6.svg",
     "static/media/next.svg": "/landing-project/static/media/next.e7aea246eefc628a4ab09850cb7a46e5.svg",
-    "main.8c51c227.css.map": "/landing-project/static/css/main.8c51c227.css.map",
-    "main.46d9c227.js.map": "/landing-project/static/js/main.46d9c227.js.map",
+    "main.ddb234b9.css.map": "/landing-project/static/css/main.ddb234b9.css.map",
+    "main.df3728fc.js.map": "/landing-project/static/js/main.df3728fc.js.map",
     "787.ebbeeddc.chunk.js.map": "/landing-project/static/js/787.ebbeeddc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c51c227.css",
-    "static/js/main.46d9c227.js"
+    "static/css/main.ddb234b9.css",
+    "static/js/main.df3728fc.js"
   ]
 }
