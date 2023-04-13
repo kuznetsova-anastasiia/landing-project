@@ -15,17 +15,48 @@ import { Message } from './components/Message';
 import { GalleryModal } from './components/GalleryModal';
 
 export const App = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(true);
   const [menuActive, setMenuActive] = useState(false);
   const [formActive, setFormActive] = useState(false);
   const [message, setMessage] = useState(false);
   const [galleryActive, setGalleryActive] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 300);
+    if (window.location.hash) {
+        let target = window.location.hash;
+        let top = document.querySelector(target).offsetTop;
+        let height = document.querySelector(target).offsetHeight;
+        let scroll = 0;
+
+        switch (target) {
+          case '#features':
+            scroll = top;
+            break;
+
+          case '#contents':
+            scroll = top + 0.4 * height;
+            break;
+          
+          case '#gallery':
+            scroll = top + height;
+            break;
+          
+          case '#partners':
+            scroll = top + 3 * height;
+            break;
+
+          case '#testimonials':
+            scroll = top + height * 2;
+            break;
+
+          default:
+            break;
+        }
+
+        window.scrollTo(0, scroll);
+    }
   }, []);
+
 
   return (
     <>

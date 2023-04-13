@@ -1,6 +1,6 @@
 export const sectionAnimation = {
   hidden: {
-    x: 200,
+    x: 50,
     opacity: 0,
   },
   visible: {

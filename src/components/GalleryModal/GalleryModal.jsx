@@ -49,7 +49,7 @@ export const GalleryModal = ({ active, setActive }) => {
     <Modal isOpen={active} onClose={setActive} size="3xl">
       <ModalOverlay />
       <ModalContent bg="#181818">
-        <div className='modal__content'>
+        <div className='modal__content gallery-content'>
           <img 
             className='modal__close-icon' 
             src={close} 

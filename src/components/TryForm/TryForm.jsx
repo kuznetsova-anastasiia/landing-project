@@ -8,8 +8,8 @@ export const TryForm = ({ active, setActive, setMessage }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [textarea, setTextarea] = useState('');
-  const [isInvalidName, setIsInvalidName] = useState(false);
-  const [isInvalidEmail, setIsInvalidEmail] = useState(false);
+  const [isNameInvalid, setIsNameInvalid] = useState(false);
+  const [isEmailInvalid, setIsEmailInvalid] = useState(false);
 
   const clear = () => {
     setName('');
@@ -18,21 +18,29 @@ export const TryForm = ({ active, setActive, setMessage }) => {
     setActive(false);
   }
   const handleSubmit = (event) => {
-    if (name && email && email.includes('@')) {
-      event.preventDefault();
-      setActive(false);
-      setMessage(true);
-      setTimeout(() => {
-        setMessage(false);
-      }, 2000);
-      setName('');
-      setEmail('');
-      setTextarea('');
-    } else if (!name) {
-      setIsInvalidName(true);
-    } else if (!email || !email.includes('@')) {
-      setIsInvalidEmail(true);
+    const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    
+    if (!name) {
+      setIsNameInvalid(true);
+
+      return;
     }
+
+    if (!email || !emailPattern.test(email)) {
+      setIsEmailInvalid(true);
+
+      return;
+    }
+
+    event.preventDefault();
+    setActive(false);
+    setMessage(true);
+    setTimeout(() => {
+      setMessage(false);
+    }, 2000);
+    setName('');
+    setEmail('');
+    setTextarea('');
   }
 
   return (
@@ -53,9 +61,9 @@ export const TryForm = ({ active, setActive, setMessage }) => {
                 value={name} 
                 onChange={(e) => {
                   setName(e.target.value);
-                  setIsInvalidName(false);
+                  setIsNameInvalid(false);
                 }}
-                isInvalid={isInvalidName}
+                isInvalid={isNameInvalid}
               />
               Your name
             </label>
@@ -68,9 +76,9 @@ export const TryForm = ({ active, setActive, setMessage }) => {
                 value={email} 
                 onChange={(e) => {
                   setEmail(e.target.value);
-                  setIsInvalidEmail(false);
+                  setIsEmailInvalid(false);
                 }}
-                isInvalid={isInvalidEmail}
+                isInvalid={isEmailInvalid}
               />
               Your email
             </label>
