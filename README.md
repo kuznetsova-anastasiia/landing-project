@@ -1,5 +1,15 @@
-# Figma Land
+# Figma Land Landing
 
-Landing page project \
-Technology Stack: SCSS, React, ChakraUI, Framer Motion \
-[DEMO](https://kuznetsova-anastasiia.github.io/landing-project/)
+![image](https://user-images.githubusercontent.com/111063225/234199089-72a178a3-94e5-400c-a4c4-25fdddb075eb.png)
+
+## Description
+Landing Page for Figma Land with adptive and responsive layout and user interactivity
+
+## Technologies
+ - React
+ - SCSS
+ - Chakra UI
+ - Framer Motion
+
+## Preview
+[DEMO LINK](https://kuznetsova-anastasiia.github.io/landing-project/)
