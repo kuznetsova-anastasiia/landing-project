@@ -7,6 +7,7 @@ Landing Page for Figma Land with adptive and responsive layout and user interact
 
 ## Technologies
  - React
+ - JavaScript
  - SCSS
  - Chakra UI
  - Framer Motion
